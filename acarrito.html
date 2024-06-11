@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <style>
+        body {
+            font-family: Lucida Bright, sans-serif;
+            background-color: #f5edfc; 
+            color: #333; 
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+           
+        header {
+            background-color: #FFFFFF; 
+            color: #825bbd;
+            text-align: center;
+            padding: 15px;
+        }
+        nav {
+            background-color: #825bbd; 
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+           
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 30px;
+        }
+        nav a:hover {
+            background-color: #e0b0ff ;
+        }
+        form {
+            display: flex;
+            justify-content: right;
+            margin-bottom: 30px;
+        }
+        form input[type="search"] {
+            flex-grow: 0.2;
+            padding: 15px;
+            border: 3px solid #78288c;
+        }
+        fom {
+        display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        form input[type="search"] {
+            flex-grow: 0.2;
+            padding: 20px;
+            border: 3px solid #78288c;
+        }
+        
+        section {
+            padding: 20px;
+            margin: 30px 0;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        .categorias-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .categoria {
+            margin: 10px;
+            text-align: center;
+            font-size: 25px;
+            background-color: #825bbd;
+            color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            width: 200px;
+        }
+        .categoria p {
+            margin: 0;
+        }
+        .marca {
+            margin: 2px;
+            text-align: center;
+            font-size: 25px;
+            background-color: #;
+            color: #fff;
+            padding: 2px;
+            border-radius: 8px;
+            width: 200px;
+        }
+        .marca p {
+            margin: 0;
+        }
+       footer {
+            background-color: #ffffff; 
+            color: #333;
+            adding: 20px 0;
+            display: flex;
+           }
+           
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #78288c;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #825bbd;
+            color: #fff;
+        }
+        .total {
+            text-align: right;
+        }
+        .btn {
+            background-color: #825bbd;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #e0b0ff;
+        }
+      </style>
+</head>
+
+<body>
+<img src="logo.png" align="left" width="120" height="110" ><img src="nombre.png" align="left" width="300" height="90" >
+<header>
+
+<form>
+        <input type="search" placeholder="Buscar productos...">
+        <button type="submit">Buscar</button>
+        
+        <img src="ingresar.png" align="right"width="35" height="45" border="0"> 
+        <font size=4><a href="#ingresar">Ingresar</a></font> 
+        
+        <img src="carrito.png" width="45" height="40"><a href="acarrito.html">
+         <a name="arriba"></a>
+    </form>
+			
+			
+</header>
+
+<nav>
+ <font size=4><a href="acategorias.html">Categorias</a></font>
+<font size=4><a href="anosotros.html">Qui&eacute;nes Somos</a></font>
+<font size=4><a href="aproductos.html">Productos</a></font>
+<font size=4><a href="aofertas.html">Ofertas y Promociones</a></font>
+
+</nav>
+    <h1><p align =center>Carrito de Compras</p></h1>
+        <h2>Agregar Producto</h2>
+    <select id="producto-seleccion">
+        <option value="Arroz (1 kg)|30">Arroz (1 kg) - $30 MXN</option>
+        <option value="Frijoles (1 kg)|40">Frijoles (1 kg) - $40 MXN</option>
+        <option value="Azúcar (1 kg)|24">Azúcar (1 kg) - $24 MXN</option>
+        <option value="Aceite vegetal (1 L)|70">Aceite vegetal (1 L) - $70 MXN</option>
+        <option value="Sal (1 kg)|16">Sal (1 kg) - $16 MXN</option>
+        <option value="Harina de trigo (1 kg)|26">Harina de trigo (1 kg) - $26 MXN</option>
+        <option value="Pasta (500 g)|20">Pasta (500 g) - $20 MXN</option>
+        <option value="Leche (1 L)|22">Leche (1 L) - $22 MXN</option>
+        <option value="Café soluble (200 g)|76">Café soluble (200 g) - $76 MXN</option>
+        <option value="Té (20 sobres)|24">Té (20 sobres) - $24 MXN</option>
+        <option value="Cereal (500 g)|60">Cereal (500 g) - $60 MXN</option>
+        <option value="Avena (500 g)|24">Avena (500 g) - $24 MXN</option>
+        <option value="Pan de caja (680 g)|44">Pan de caja (680 g) - $44 MXN</option>
+        <option value="Huevos (12 unidades)|50">Huevos (12 unidades) - $50 MXN</option>
+        <option value="Queso (500 g)|80">Queso (500 g) - $80 MXN</option>
+        <option value="Jamón (250 g)|60">Jamón (250 g) - $60 MXN</option>
+        <option value="Mantequilla (250 g)|50">Mantequilla (250 g) - $50 MXN</option>
+        <option value="Yogur (1 L)|40">Yogur (1 L) - $40 MXN</option>
+        <option value="Galletas (200 g)|30">Galletas (200 g) - $30 MXN</option>
+        <option value="Chocolate (100 g)|36">Chocolate (100 g) - $36 MXN</option>
+        <option value="Atún (140 g)|20">Atún (140 g) - $20 MXN</option>
+        <option value="Sardinas (120 g)|24">Sardinas (120 g) - $24 MXN</option>
+        <option value="Mayonesa (500 g)|50">Mayonesa (500 g) - $50 MXN</option>
+        <option value="Ketchup (500 g)|40">Ketchup (500 g) - $40 MXN</option>
+        <option value="Mostaza (250 g)|30">Mostaza (250 g) - $30 MXN</option>
+        <option value="Salsa de tomate (1 L)|30">Salsa de tomate (1 L) - $30 MXN</option>
+        <option value="Jugo de naranja (1 L)|35">Jugo de naranja (1 L) - $35 MXN</option>
+        <option value="Refresco (2 L)|25">Refresco (2 L) - $25 MXN</option>
+        <option value="Agua embotellada (1.5 L)|15">Agua embotellada (1.5 L) - $15 MXN</option>
+        <option value="Papel higiénico (4 rollos)|40">Papel higiénico (4 rollos) - $40 MXN</option>
+        <option value="Detergente en polvo (1 kg)|50">Detergente en polvo (1 kg) - $50 MXN</option>
+        <option value="Suavizante de ropa (1 L)|45">Suavizante de ropa (1 L) - $45 MXN</option>
+        <option value="Jabón de tocador (100 g)|10">Jabón de tocador (100 g) - $10 MXN</option>
+        <option value="Shampoo (750 ml)|60">Shampoo (750 ml) - $60 MXN</option>
+        <option value="Pasta de dientes (100 ml)|30">Pasta de dientes (100 ml) - $30 MXN</option>
+        <option value="Desodorante (150 ml)|40">Desodorante (150 ml) - $40 MXN</option>
+        <option value="Rastrillos desechables (4 unidades)|25">Rastrillos desechables (4 unidades) - $25 MXN</option>
+        <option value="Bolsa de basura (20 unidades)|30">Bolsa de basura (20 unidades) - $30 MXN</option>
+        <option value="Papel aluminio (10 m)|25">Papel aluminio (10 m) - $25 MXN</option>
+        <option value="Servilletas (200 unidades)|35">Servilletas (200 unidades) - $35 MXN</option>
+        <option value="Esponjas para lavar trastes (3 unidades)|20">Esponjas para lavar trastes (3 unidades) - $20 MXN</option>
+        <option value="Limpiador multiusos (1 L)|30">Limpiador multiusos (1 L) - $30 MXN</option>
+        <option value="Cloro (1 L)|15">Cloro (1 L) - $15 MXN</option>
+        <option value="Desinfectante de pisos (1 L)|25">Desinfectante de pisos (1 L) - $25 MXN</option>
+        <option value="Fideos (500 g)|20">Fideos (500 g) - $20 MXN</option>
+        <option value="Sopa instantánea (77 g)|10">Sopa instantánea (77 g) - $10 MXN</option>
+        <option value="Galletas saladas (200 g)|25">Galletas saladas (200 g) - $25 MXN</option>
+        <option value="Chicles (12 unidades)|10">Chicles (12 unidades) - $10 MXN</option>
+        <option value="Caramelos (200 g)|20">Caramelos (200 g) - $20 MXN</option>
+        <option value="Palomitas de maíz (100 g)|15">Palomitas de maíz (100 g) - $15 MXN</option>
+    </select>
+    <button type="button" class="btn" onclick="agregarProducto()">Agregar al Carrito</button>
+    </br>
+    </br>
+    </br>
+    <form id="carrito">
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="carrito-cuerpo">
+              
+            </tbody>
+        </table>
+         </form>
+        <p class="total"><strong>Total a Pagar: $0.00</strong></p>
+        <button type="submit" class="btn"><a href="apago.html">Proceder al Pago</button>
+  
+
+
+
+    <script>
+        function agregarProducto() {
+            const select = document.getElementById('producto-seleccion');
+            const [producto, precio] = select.value.split('|');
+            const tableBody = document.getElementById('carrito-cuerpo');
+            
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${producto}</td>
+                <td><input type="number" name="cantidad" value="1" min="1" onchange="actualizarTotal()"></td>
+                <td>$${precio}</td>
+                <td>$${precio}</td>
+                <td><button type="button" class="btn" onclick="eliminarProducto(this)">Eliminar</button></td>
+            `;
+            tableBody.appendChild(newRow);
+            actualizarTotal();
+        }
+
+        function eliminarProducto(button) {
+            const row = button.closest('tr');
+            row.remove();
+            actualizarTotal();
+        }
+
+        function actualizarTotal() {
+            const rows = document.querySelectorAll('#carrito tbody tr');
+            let total = 0;
+            rows.forEach(row => {
+                const cantidad = row.querySelector('input[type="number"]').value;
+                const precioUnitario = parseFloat(row.cells[2].innerText.replace('$', ''));
+                const totalProducto = cantidad * precioUnitario;
+                row.cells[3].innerText = `$${totalProducto.toFixed(2)}`;
+                total += totalProducto;
+            });
+            document.querySelector('.total strong').innerText = `Total a Pagar: $${total.toFixed(2)}`;
+        }
+
+        document.getElementById('carrito').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Procesando el pago...');
+           
+        });
+    </script>
+    </br>
+    </br>
+     </br>
+    </br>
+     </br>
+    </br>
+     </br>
+    </br>
+     </br>
+    </br>
+     </br>
+    </br>
+    </br>
+<footer>  
+<font color="black">   
+<font size=4><p align="left">Empresa:</p></font>
+<ul>
+<li><p align="left">Nosotros</li>
+<li><p align="left">Mi cuenta</li>
+</ul>
+</font>
+
+
+<font color="black">
+<font size=4><p align="left">Contacto:</p></font>
+<ul >
+<li><p align="left">8999670243</li>
+<li><p align="left">abarrotesjulia@gmail.com</li>
+<li><p align="left">Facebook: Abarrotes Julia Oficial</li>
+<li><p align="left">Dirección: Calle Anacuas #101 colonia Monterreal</p>
+<p align="left">Ciudad Rio bravo Tamaulipas</p></li>
+</ul>
+</font>
+
+<p align="right"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.201990225719!2d-98.1202898287713!3d25.99419984860629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86656d5c5252db23%3A0x639c69e0abce92a3!2sAnacuas%20101%2C%20Monterreal%2C%2088930%20Cdad.%20R%C3%ADo%20Bravo%2C%20Tamps.!5e0!3m2!1ses-419!2smx!4v1713849790261!5m2!1ses-419!2smx" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+   	
+</footer>
+
+<font size=4><p align="center">Registrate en nuestra sucursal</p></font>
+<fom>
+<input type="search" placeholder="Escribe tu email">
+        <button type="submit">Enviar</button></p>
+        </fom>
+        
+
+
+<font size=4><p align="center">Formas de pago</p></font>
+<p align="center"><img src="pago.png" width="300" height="100"></p>
+
+<p align="center"><a href="#arriba">Volver al inicio</a></p>
+
+<p align="center">&copy; 2024 Abarrotes Julia</p>
+</body>
+</html>
